@@ -1,0 +1,35 @@
+manifestVersion: 1
+id: jclark-openviking
+name: OpenViking
+tagline: Self-evolving context database for AI agents
+icon: https://github.com/volcengine.png
+category: Files # closest fit in the standard Umbrel category list; change if you'd rather it show under a different tab
+version: "1.0.0" # packaging version - bump this yourself whenever you repoint the image tag below
+port: 1933
+description: >-
+  OpenViking is an open-source context database built for AI agents. It unifies
+  agent memory, knowledge RAG, and skills through a filesystem-like "viking://"
+  protocol, with tiered context loading to keep token usage down.
+
+
+  Packaged here for personal use as a persistent, queryable memory store for
+  home-lab agents (e.g. Nagatha) rather than relying on ad-hoc vector storage.
+
+
+  Note: OpenViking's server needs a one-time config file (ov.conf) with your
+  embedding/VLM model provider and API key before it will start serving requests.
+  There is no setup wizard in the Umbrel UI for this - see this store's README
+  for how to create it.
+developer: Volcengine
+website: https://github.com/volcengine/OpenViking
+submitter: Jeff Clark
+submission: https://github.com/jclark1978/jclark-umbrel-app-store
+repo: https://github.com/volcengine/OpenViking
+support: https://github.com/volcengine/OpenViking/issues
+gallery: []
+releaseNotes: >-
+  Initial packaging of OpenViking for personal use on Jeff's Umbrel server.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

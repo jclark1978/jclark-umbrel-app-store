@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      # Format: <app-id>_<docker-service-name>_1
+      APP_HOST: jclark-openviking_server_1
+      APP_PORT: 1933
+
+  server:
+    image: ghcr.io/volcengine/openviking:latest
+    restart: on-failure
+    user: "1000:1000"
+    init: true
+    volumes:
+      # Persists ov.conf and the workspace/data directory across restarts.
+      # See the store README for how to seed ov.conf on first run.
+      - ${APP_DATA_DIR}/data:/app/.openviking
+    environment:
+      OPENVIKING_SERVER_PORT: "1933"

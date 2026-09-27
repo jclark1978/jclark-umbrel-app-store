@@ -1,0 +1,2 @@
+id: "jclark" # Unique prefix for every app in this store. Only lowercase letters and dashes.
+name: "Jeff Clark" # Shown in umbrelOS as "<name> App Store".
